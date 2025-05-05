@@ -1,9 +1,9 @@
 # Cardiovascular Disease Analysis
 
-This repository contains R code for analyzing a cardiovascular disease dataset, `(K)cardio_data_processed.csv`. The analysis includes data preprocessing, normalization, visualizations (scatter and box plots), correlation analysis, chi-square tests, and logistic regression to explore relationships between variables such as age, systolic blood pressure (`ap_hi`), cholesterol, glucose, BMI, and the presence of cardiovascular disease (`cardio`).
+This repository contains R code for analyzing a cardiovascular disease dataset, `cardio_data_processed.csv`. The analysis includes data preprocessing, normalization, visualizations (scatter and box plots), correlation analysis, chi-square tests, and logistic regression to explore relationships between variables such as age, systolic blood pressure (`ap_hi`), cholesterol, glucose, BMI, and the presence of cardiovascular disease (`cardio`).
 
 ## Dataset
-The dataset `(K)cardio_data_processed.csv` includes health-related variables for patients, such as:
+The dataset `cardio_data_processed.csv` includes health-related variables for patients, such as:
 - `id`: Unique patient identifier
 - `age`: Age in days
 - `age_years`: Age in years
@@ -28,33 +28,7 @@ To run the code, install the following R packages:
 install.packages(c("tidyverse", "ggplot2", "MASS", "corrplot", "rcompanion", "dplyr"))
 ```
 - **R version**: 4.0 or higher recommended.
-- **Dataset**: Place `(K)cardio_data_processed.csv` in the working directory.
-
-## File Structure
-- `analysis.R`: Main R script containing all preprocessing, normalization, visualization, and statistical analysis.
-- `(K)cardio_data_processed.csv`: Input dataset (not included in the repository; user must provide).
-- `README.md`: This file.
-
-## Instructions
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/yourusername/cardio-analysis.git
-   ```
-2. **Set Working Directory**:
-   Place `(K)cardio_data_processed.csv` in the project directory and set it as the R working directory:
-   ```R
-   setwd("path/to/cardio-analysis")
-   ```
-3. **Install Dependencies**:
-   Run the package installation command above in R.
-4. **Run the Script**:
-   Execute `analysis.R` in R or RStudio:
-   ```R
-   source("analysis.R")
-   ```
-5. **View Outputs**:
-   - Visualizations (scatter and box plots) will appear in the R plot window.
-   - Statistical results (correlations, chi-square tests, logistic regression summaries) will print to the console.
+- **Dataset**: Place `cardio_data_processed.csv` in the working directory.
 
 ## Code Overview
 The R script performs the following tasks:
@@ -88,13 +62,7 @@ The R script performs the following tasks:
 - **Normalized Data**: A dataset (`modified_data_normalized`) with numeric columns scaled to [0, 1].
 
 ## Notes
-- Ensure `(K)cardio_data_processed.csv` is in the correct format and location.
+- Ensure `cardio_data_processed.csv` is in the correct format and location.
 - Some chi-square tests may produce warnings if table cells have low counts; results should be interpreted cautiously.
 - Outlier removal and normalization are tailored to the dataset’s characteristics (e.g., realistic ranges for `ap_hi`: 50–250 mmHg).
 - The code assumes `gender` is coded as 1 or 2; adjust labels if needed (e.g., 1 = Female, 2 = Male).
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-For questions or contributions, open an issue or submit a pull request on GitHub.
