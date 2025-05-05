@@ -1,4 +1,4 @@
-# R_project
+# Data Analysis using R
 This R project was developed as a part of CSAEC coursework.
 
 
